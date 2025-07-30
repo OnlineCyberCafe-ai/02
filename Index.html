@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Cyber Cafe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .nav {
+            margin-top: 10px;
+        }
+        .nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            flex: 1 0 auto;
+        }
+        .main-container {
+            background-color: #f9f9f9;
+            border: 3px solid #333;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 1fr; 
+        }
+        .cafe-list-container, .job-list-container {
+            height: 350px;
+            overflow-y: auto;
+            border: 2px solid #333;
+            padding: 15px;
+            margin: 0; 
+        }
+        .cafe-list, .job-list {
+            list-style: none;
+            padding: 0;
+        }
+        .cafe-item, .job-item {
+            background-color: #fff;
+            margin: 15px 0;
+            padding: 15px;
+            border-left: 4px solid #333;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cafe-item:hover, .job-item:hover {
+            background-color: #e0e0e0;
+        }
+        .contact-btn {
+            padding: 8px 15px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .contact-btn:hover {
+            background-color: #555;
+        }
+
+        
+        @media (max-width: 600px) {
+            .nav {
+                display: flex;
+                flex-direction: column;
+                margin-top: 5px;
+            }
+            .nav a {
+                margin: 5px 0;
+            }
+            .content {
+                padding: 10px;
+                max-width: 100%;
+            }
+            .main-container {
+                padding: 15px;
+                border-radius: 5px;
+                gap: 15px; 
+            }
+            .cafe-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contact-btn {
+                margin-top: 10px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .cafe-list-container, .job-list-container {
+                height: 200px;
+            }
+        }
+
+       
+        @media (min-width: 601px) {
+            .main-container {
+                grid-template-columns: 1fr 1fr; 
+            }
+        }
+
+       
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            flex-shrink: 0;
+            margin-top: auto;
+        }
+        .footer a {
+            color: #ddd;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Online Cyber Cafe</h1>
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="main-container">
+            <div>
+                <h2>Registered Cyber Cafes</h2>
+                <div class="cafe-list-container">
+                    <ul class="cafe-list" id="cafeList">
+                        <li class="cafe-item">Sai Cyber Cafe 
+                            <a href="https://example.com/cafe1" class="contact-btn" target="_blank">Contact</a>
+                        </li>
+                        <li class="cafe-item">A. Cyber Cafe <br>
+                            <a href="https://example.com/cafe2" class="contact-btn" target="_blank">Contact</a>
+                        </li>
+                        <li class="cafe-item">Unique Cyber Cafe <br>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJBbdnHv1zaxCIVuF_N8C0UwwT6gWFzOp93i4yezb9HdlxuQ/viewform?usp=preview" class="contact-btn" target="_blank">Contact</a>
+                        </li>
+                        <li class="cafe-item">Digital Cyber Cafe
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd6YfsyeUoGYw5hnJM8pGbtgmvsZTQGAQk_vsSto_N9eaCytA/viewform?usp=dialog" class="contact-btn" target="_blank">Contact</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h2>Current Government Openings</h2>
+                <div class="job-list-container">
+                    <ul class="job-list" id="jobList">
+                        <li class="job-item">UPSC Civil Services Exam 2025 - https://upsc.gov.in/ (Deadline: 2025-09-15)</li>
+                        <li class="job-item">SSC Combined Graduate Level Exam 2025 - https://ssc.nic.in/ (Deadline: 2025-08-30)</li>
+                        <li class="job-item">Railway NTPC Recruitment 2025 - https://indianrailways.gov.in/ (Deadline: 2025-10-10)</li>
+                        <li class="job-item">Railway NTPC Recruitment 2025 - https://indianrailways.gov.in/ (Deadline: 2025-10-10)</li>
+                        <li class="job-item">Railway NTPC Recruitment 2025 - https://indianrailways.gov.in/ (Deadline: 2025-10-10)</li>
+                        <li class="job-item">Railway NTPC Recruitment 2025 - https://indianrailways.gov.in/ (Deadline: 2025-10-10)</li>
+                        <li class="job-item">Railway NTPC Recruitment 2025 - https://indianrailways.gov.in/ (Deadline: 2025-10-10)</li>
+                        <li class="job-item">Railway NTPC Recruitment 2025 - https://indianrailways.gov.in/ (Deadline: 2025-10-10)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Online Cyber Cafe. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:support@onlinecybercafe.com">support@onlinecybercafe.com</a> | Phone: +91-123-456-7890</p>
+        <p>Follow us: <a href="https://facebook.com/onlinecybercafe" target="_blank">Facebook</a> | <a href="https://twitter.com/onlinecybercafe" target="_blank">Twitter</a></p>
+    </div>
+</body>
+</html>
