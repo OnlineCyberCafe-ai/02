@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Online Cyber Cafe</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background-color: #431bd1;
+      color: white;
+      padding: 8px 15px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 100%;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container {
+      width: 90px;
+      height: 90px;
+      margin-right: 8px;
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .nav {
+      margin: 0;
+    }
+
+    .nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .hamburger span {
+      width: 20px;
+      height: 2px;
+      background-color: white;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .content {
+      padding: 15px;
+      width: 100%;
+      flex: 1 0 auto;
+      max-width: 100%;
+    }
+
+    .about-section {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-left: 4px solid #333;
+      max-width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #431bd1;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 8px 0;
+        text-align: center;
+      }
+
+      .nav-links a {
+        margin: 8px 0;
+        font-size: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .content {
+        padding: 8px;
+        width: 100%;
+      }
+
+      .about-section {
+        padding: 10px;
+      }
+
+      .logo-container {
+        width: 60px;
+        height: 30px;
+        margin-right: 8px;
+      }
+
+      .header {
+        flex-wrap: wrap;
+      }
+
+      .header-right {
+        flex-grow: 1;
+        justify-content: flex-end;
+      }
+    }
+
+    .footer {
+      background-color: #431bd1;
+      color: white;
+      text-align: center;
+      padding: 8px 15px;
+      flex-shrink: 0;
+      margin-top: auto;
+      max-width: 100%;
+    }
+
+    .footer a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 8px;
+      font-size: 20px;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <div class="logo-container">
+        <img src="logo.jpg" alt="Online Cyber Cafe Logo">
+      </div>
+      <h1>Online Cyber Cafe</h1>
+    </div>
+    <div class="header-right">
+      <div class="nav nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="about-section">
+      <h2>About Online Cyber Cafe</h2>
+      <p>Welcome to Online Cyber Cafe, a platform designed to connect individuals with registered cyber cafes for convenient form-filling services. In today's digital age, staying home and completing essential paperwork has never been easier. Our mission is to provide a seamless experience by listing verified cyber cafes across your area, allowing you to contact them directly to fill out forms for government services, job applications, and more. We also feature current government job openings to keep you informed about opportunities. Stay connected and empowered with Online Cyber Cafe!</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 Online Cyber Cafe. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:support@onlinecybercafe.com">support@onlinecybercafe.com</a> | Phone: +918275603973</p>
+    <p>Follow us: <a href="https://facebook.com/onlinecybercafe" target="_blank">Facebook</a> | <a href="https://twitter.com/onlinecybercafe" target="_blank">Twitter</a></p>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

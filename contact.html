@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Online Cyber Cafe</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background-color: #431bd1;
+      color: white;
+      padding: 8px 15px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 100%;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container {
+      width: 90px;
+      height: 90px;
+      margin-right: 8px;
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .nav {
+      margin: 0;
+    }
+
+    .nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .hamburger span {
+      width: 20px;
+      height: 2px;
+      background-color: white;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .content {
+      padding: 15px;
+      width: 100%;
+      flex: 1 0 auto;
+      max-width: 100%;
+    }
+
+    .contact-container {
+      background-color: #f9f9f9;
+      border: 2px solid #333;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .contact-section h2 {
+      margin-top: 0;
+    }
+
+    .contact-section p {
+      line-height: 1.6;
+    }
+
+    .whatsapp-chat {
+      color: #25D366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .whatsapp-chat:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #431bd1;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 8px 0;
+        text-align: center;
+      }
+
+      .nav-links a {
+        margin: 8px 0;
+        font-size: 14px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .content {
+        padding: 8px;
+        width: 100%;
+      }
+
+      .contact-container {
+        padding: 10px;
+        border-radius: 5px;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .logo-container {
+        width: 60px;
+        height: 30px;
+        margin-right: 8px;
+      }
+
+      .header {
+        flex-wrap: wrap;
+      }
+
+      .header-right {
+        flex-grow: 1;
+        justify-content: flex-end;
+      }
+    }
+
+    @media (min-width: 601px) {
+      .contact-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .footer {
+      background-color: #431bd1;
+      color: white;
+      text-align: center;
+      padding: 8px 15px;
+      flex-shrink: 0;
+      margin-top: auto;
+      max-width: 100%;
+    }
+
+    .footer a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 8px;
+      font-size: 14px;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <div class="logo-container">
+        <img src="logo.jpg" alt="Online Cyber Cafe Logo">
+      </div>
+      <h1>Online Cyber Cafe</h1>
+    </div>
+    <div class="header-right">
+      <div class="nav nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="contact-container">
+      <div class="contact-section">
+        <h2>आमच्याशी संपर्क साधा</h2>
+        <p><strong>ईमेल करा:</strong> support@onlinecybercafe.com</p>
+        <p><strong>संपर्क क्रमांक:</strong> +919322755952</p>
+        <p><strong>वेळ:</strong> सकाळी 10:00 ते संध्याकाळी 07:00</p>
+
+        <h2>नमस्कार मित्रांनो!</h2>
+        <p>ऑनलाइन फॉर्म अर्ज केंद्र (सायबर कॅफे) तुमच्या घरी खूप दूर आहे किंवा तुम्हाला येण्या-जाण्यात अडचण येत आहे किंवा तुमच्या जवळपास कोणताही योग्य सायबर कॅफे चालक नाही किंवा तुम्ही तुमच्या जीवनात खूप व्यस्त आहात, तर तुम्ही निश्चिंत राहा.</p>
+
+        <h2>वेळ वाचवा आणि घरी राहा</h2>
+        <p>आता तुम्ही घरी बसून तुमचा मौल्यवान वेळ वाचवू शकता, गर्दीपासून मुक्त राहू शकता, आणि कोणत्याही प्रकारच्या सरकारी किंवा खाजगी नोकरी अर्जासाठी आमच्याशी संपर्क साधा. तुम्ही 100 टक्के विश्वासाने आमच्याशी संपर्क साधू शकता.</p>
+
+        <h2>आम्ही पुरवत असलेल्या सेवा</h2>
+        <h2>ऑनलाइन फॉर्मसाठी तुमचे दस्तऐवज पाठवा</h2>
+        <p>सर्व प्रकारच्या ऑनलाइन फॉर्म भरण्यासाठी आवश्यक असलेले दस्तऐवज तुम्ही तुमच्या मोबाईलवर फोटो क्लिक करून आम्हाला पाठवू शकता.</p>
+        <p><strong>टीप:</strong> तुम्ही पाठवलेले दस्तऐवज स्पष्ट आणि वाचण्यायोग्य असणे आवश्यक आहे.</p>
+        <p>कोणत्याही प्रकारच्या ऑनलाइन फॉर्मला तुमच्या पडताळणीनंतरच अंतिम सबमिट केले जाईल. तुमचे दस्तऐवज पाठवण्यासाठी तुम्ही <a href="https://wa.me/919322755952" class="whatsapp-chat" target="_blank">WhatsApp चॅट</a> चा वापर करू शकता किंवा ईमेलद्वारे पाठवू शकता. ईमेल आहेत - OCCVED@GMAIL.COM, support@onlinecybercafe.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 Online Cyber Cafe. सर्व हक्क राखीव.</p>
+    <p>आमच्याशी संपर्क: <a href="mailto:support@onlinecybercafe.com">support@onlinecybercafe.com</a> | फोन: +918275603973</p>
+    <p>आम्हाला फॉलो करा: <a href="https://facebook.com/onlinecybercafe" target="_blank">Facebook</a> | <a href="https://twitter.com/onlinecybercafe" target="_blank">Twitter</a></p>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
